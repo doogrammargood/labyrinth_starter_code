@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns
+     http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="Pigale/version" for="graph" attr.name="Pigale version" attr.type="string">
+    <default>1.3.24</default>
+  </key>
+  <key id="Pigale/V/" for="node" attr.name="Coordinates" attr.type="string"/>
+  <key id="Pigale/V/" for="node" attr.name="Color" attr.type="string"/>
+  <key id="Pigale/V/" for="node" attr.name="Label" attr.type="string"/>
+  <key id="Pigale/E/" for="edge" attr.name="Color" attr.type="string"/>
+  <key id="Pigale/E/" for="edge" attr.name="Width" attr.type="string"/>
+  <graph id="graph3" edgedefault="undirected">
+    <node id="n1">
+      <data key="Pigale/V/">265.185,28</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">1</data>
+    </node>
+    <node id="n2">
+      <data key="Pigale/V/">838,219.106</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">2</data>
+    </node>
+    <node id="n3">
+      <data key="Pigale/V/">492.85,754</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">3</data>
+    </node>
+    <node id="n4">
+      <data key="Pigale/V/">-10,446.823</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">4</data>
+    </node>
+    <node id="n5">
+      <data key="Pigale/V/">259.104,63.6667</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">5</data>
+    </node>
+    <node id="n6">
+      <data key="Pigale/V/">498.913,121.147</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">6</data>
+    </node>
+    <node id="n7">
+      <data key="Pigale/V/">798.075,268.248</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">7</data>
+    </node>
+    <node id="n8">
+      <data key="Pigale/V/">759.742,308.772</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">8</data>
+    </node>
+    <node id="n9">
+      <data key="Pigale/V/">671.089,447.736</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">9</data>
+    </node>
+    <node id="n10">
+      <data key="Pigale/V/">471.832,721.548</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">10</data>
+    </node>
+    <node id="n11">
+      <data key="Pigale/V/">47.0365,447.784</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">11</data>
+    </node>
+    <node id="n12">
+      <data key="Pigale/V/">284.56,118.964</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">12</data>
+    </node>
+    <node id="n13">
+      <data key="Pigale/V/">518.339,209.547</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">13</data>
+    </node>
+    <node id="n14">
+      <data key="Pigale/V/">436.348,133.609</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">14</data>
+    </node>
+    <node id="n15">
+      <data key="Pigale/V/">258.015,102.279</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">15</data>
+    </node>
+    <node id="n16">
+      <data key="Pigale/V/">704.55,346.943</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">16</data>
+    </node>
+    <node id="n17">
+      <data key="Pigale/V/">702.134,389.434</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">17</data>
+    </node>
+    <node id="n18">
+      <data key="Pigale/V/">730.714,317.944</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">18</data>
+    </node>
+    <node id="n19">
+      <data key="Pigale/V/">466.92,670.676</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">19</data>
+    </node>
+    <node id="n20">
+      <data key="Pigale/V/">310.651,605.289</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">20</data>
+    </node>
+    <node id="n21">
+      <data key="Pigale/V/">138.738,487.396</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">21</data>
+    </node>
+    <node id="n22">
+      <data key="Pigale/V/">187.165,425.336</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">22</data>
+    </node>
+    <node id="n23">
+      <data key="Pigale/V/">195.839,334.143</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">23</data>
+    </node>
+    <node id="n24">
+      <data key="Pigale/V/">229.101,246.771</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">24</data>
+    </node>
+    <node id="n25">
+      <data key="Pigale/V/">256.56,185.895</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">25</data>
+    </node>
+    <node id="n26">
+      <data key="Pigale/V/">338.005,168.43</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">26</data>
+    </node>
+    <node id="n27">
+      <data key="Pigale/V/">502.74,268.164</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">27</data>
+    </node>
+    <node id="n28">
+      <data key="Pigale/V/">536.164,256.318</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">28</data>
+    </node>
+    <node id="n29">
+      <data key="Pigale/V/">591.227,330.353</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">29</data>
+    </node>
+    <node id="n30">
+      <data key="Pigale/V/">646.993,361.081</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">30</data>
+    </node>
+    <node id="n31">
+      <data key="Pigale/V/">583.596,288.142</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">31</data>
+    </node>
+    <node id="n32">
+      <data key="Pigale/V/">663.119,326.106</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">32</data>
+    </node>
+    <node id="n33">
+      <data key="Pigale/V/">628.658,411.724</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">33</data>
+    </node>
+    <node id="n34">
+      <data key="Pigale/V/">554.4,504.088</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">34</data>
+    </node>
+    <node id="n35">
+      <data key="Pigale/V/">470.072,610.478</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">35</data>
+    </node>
+    <node id="n36">
+      <data key="Pigale/V/">425.087,624.07</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">36</data>
+    </node>
+    <node id="n37">
+      <data key="Pigale/V/">309.041,562.914</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">37</data>
+    </node>
+    <node id="n38">
+      <data key="Pigale/V/">441.437,663.391</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">38</data>
+    </node>
+    <node id="n39">
+      <data key="Pigale/V/">233.801,516.844</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">39</data>
+    </node>
+    <node id="n40">
+      <data key="Pigale/V/">205.555,461.068</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">40</data>
+    </node>
+    <node id="n41">
+      <data key="Pigale/V/">270.246,446.478</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">41</data>
+    </node>
+    <node id="n42">
+      <data key="Pigale/V/">289.248,387.562</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">42</data>
+    </node>
+    <node id="n43">
+      <data key="Pigale/V/">223.75,376.153</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">43</data>
+    </node>
+    <node id="n44">
+      <data key="Pigale/V/">264.621,348.685</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">44</data>
+    </node>
+    <node id="n45">
+      <data key="Pigale/V/">270.977,318.152</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">45</data>
+    </node>
+    <node id="n46">
+      <data key="Pigale/V/">222.509,335.533</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">46</data>
+    </node>
+    <node id="n47">
+      <data key="Pigale/V/">245.38,272.87</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">47</data>
+    </node>
+    <node id="n48">
+      <data key="Pigale/V/">313.651,270.908</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">48</data>
+    </node>
+    <node id="n49">
+      <data key="Pigale/V/">275.836,220.253</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">49</data>
+    </node>
+    <node id="n50">
+      <data key="Pigale/V/">353.999,280.686</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">50</data>
+    </node>
+    <node id="n51">
+      <data key="Pigale/V/">336.471,226.111</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">51</data>
+    </node>
+    <node id="n52">
+      <data key="Pigale/V/">457.302,257.723</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">52</data>
+    </node>
+    <node id="n53">
+      <data key="Pigale/V/">431.531,347.843</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">53</data>
+    </node>
+    <node id="n54">
+      <data key="Pigale/V/">330.353,339.076</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">54</data>
+    </node>
+    <node id="n55">
+      <data key="Pigale/V/">394.587,310.206</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">55</data>
+    </node>
+    <node id="n56">
+      <data key="Pigale/V/">390.189,276.993</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">56</data>
+    </node>
+    <node id="n57">
+      <data key="Pigale/V/">394.477,254.74</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">57</data>
+    </node>
+    <node id="n58">
+      <data key="Pigale/V/">414.32,278.338</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">58</data>
+    </node>
+    <node id="n59">
+      <data key="Pigale/V/">280.569,283.854</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">59</data>
+    </node>
+    <node id="n60">
+      <data key="Pigale/V/">478.755,350.298</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">60</data>
+    </node>
+    <node id="n61">
+      <data key="Pigale/V/">510.928,419.722</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">61</data>
+    </node>
+    <node id="n62">
+      <data key="Pigale/V/">578.515,374.221</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">62</data>
+    </node>
+    <node id="n63">
+      <data key="Pigale/V/">546.507,320.229</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">63</data>
+    </node>
+    <node id="n64">
+      <data key="Pigale/V/">550.278,433.313</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">64</data>
+    </node>
+    <node id="n65">
+      <data key="Pigale/V/">509.305,538.101</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">65</data>
+    </node>
+    <node id="n66">
+      <data key="Pigale/V/">404.984,597.782</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">66</data>
+    </node>
+    <node id="n67">
+      <data key="Pigale/V/">339.387,546.527</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">67</data>
+    </node>
+    <node id="n68">
+      <data key="Pigale/V/">285.613,483.073</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">68</data>
+    </node>
+    <node id="n69">
+      <data key="Pigale/V/">337.447,441.07</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">69</data>
+    </node>
+    <node id="n70">
+      <data key="Pigale/V/">413.577,410.353</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">70</data>
+    </node>
+    <node id="n71">
+      <data key="Pigale/V/">456.631,389.697</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">71</data>
+    </node>
+    <node id="n72">
+      <data key="Pigale/V/">350.703,495.62</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">72</data>
+    </node>
+    <node id="n73">
+      <data key="Pigale/V/">416.849,489.043</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">73</data>
+    </node>
+    <node id="n74">
+      <data key="Pigale/V/">483.171,494.661</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">74</data>
+    </node>
+    <node id="n75">
+      <data key="Pigale/V/">466.629,534.18</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">75</data>
+    </node>
+    <node id="n76">
+      <data key="Pigale/V/">433.901,516.348</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">76</data>
+    </node>
+    <node id="n77">
+      <data key="Pigale/V/">437.436,539.69</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">77</data>
+    </node>
+    <node id="n78">
+      <data key="Pigale/V/">408.63,567.044</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">78</data>
+    </node>
+    <node id="n79">
+      <data key="Pigale/V/">368.267,539.953</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">79</data>
+    </node>
+    <node id="n80">
+      <data key="Pigale/V/">409.811,521.741</data>
+      <data key="Pigale/V/">5</data>
+      <data key="Pigale/V/">80</data>
+    </node>
+     <edge source="n1" target="n2">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n1" target="n5">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n1" target="n4">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n2" target="n3">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n2" target="n7">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n3" target="n4">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n3" target="n11">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n3" target="n7">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n4" target="n5">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n4" target="n15">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n4" target="n11">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n5" target="n6">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n6" target="n7">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n6" target="n8">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n6" target="n18">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n6" target="n14">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n6" target="n15">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n7" target="n8">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n8" target="n9">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n8" target="n18">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n9" target="n10">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n9" target="n17">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n10" target="n11">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n10" target="n19">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n11" target="n12">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n11" target="n25">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n12" target="n13">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n12" target="n28">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n12" target="n26">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n13" target="n14">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n13" target="n32">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n13" target="n31">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n14" target="n15">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n14" target="n16">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n16" target="n17">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n16" target="n38">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n16" target="n30">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n16" target="n32">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n17" target="n18">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n17" target="n19">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n19" target="n20">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n20" target="n21">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n20" target="n38">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n21" target="n22">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n21" target="n40">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n21" target="n39">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n21" target="n38">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n22" target="n23">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n22" target="n46">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n22" target="n43">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n23" target="n24">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n23" target="n49">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n24" target="n25">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n24" target="n49">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n25" target="n26">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n25" target="n52">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n26" target="n27">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n27" target="n28">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n27" target="n61">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n27" target="n53">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n28" target="n29">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n28" target="n63">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n29" target="n30">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n29" target="n62">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n29" target="n63">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n30" target="n31">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n30" target="n32">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n30" target="n33">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n30" target="n64">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n31" target="n32">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n33" target="n34">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n33" target="n64">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n34" target="n35">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n34" target="n64">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n35" target="n36">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n35" target="n66">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n36" target="n37">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n36" target="n66">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n37" target="n38">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n37" target="n39">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n37" target="n41">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n37" target="n67">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n39" target="n40">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n40" target="n41">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n41" target="n42">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n41" target="n53">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n41" target="n60">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n41" target="n69">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n42" target="n43">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n42" target="n54">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n42" target="n53">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n43" target="n44">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n43" target="n54">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n44" target="n45">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n44" target="n54">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n45" target="n46">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n45" target="n59">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n45" target="n48">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n46" target="n47">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n46" target="n59">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n47" target="n48">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n47" target="n59">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n48" target="n49">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n49" target="n50">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n50" target="n51">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n50" target="n54">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n51" target="n52">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n51" target="n57">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n51" target="n56">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n51" target="n55">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n52" target="n53">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n52" target="n55">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n52" target="n58">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n53" target="n54">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n53" target="n55">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n55" target="n56">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n56" target="n57">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n56" target="n58">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n57" target="n58">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n60" target="n61">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n60" target="n71">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n61" target="n62">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n61" target="n64">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n61" target="n65">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n61" target="n74">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n61" target="n72">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n61" target="n69">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n61" target="n70">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n61" target="n71">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n62" target="n63">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n65" target="n66">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n65" target="n78">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n65" target="n75">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n65" target="n74">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n66" target="n67">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n66" target="n79">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n67" target="n68">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n67" target="n72">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n68" target="n69">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n68" target="n72">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n69" target="n70">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n69" target="n72">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n70" target="n71">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n72" target="n73">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n72" target="n79">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n73" target="n74">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n73" target="n79">
+      <data key="Pigale/E/">2</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n74" target="n75">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n74" target="n76">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n74" target="n80">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n75" target="n76">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n76" target="n77">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n77" target="n78">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n77" target="n80">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n78" target="n79">
+      <data key="Pigale/E/">4</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n78" target="n80">
+      <data key="Pigale/E/">3</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+     <edge source="n79" target="n80">
+      <data key="Pigale/E/">1</data>
+      <data key="Pigale/E/">2</data>
+    </edge>
+   </graph>
+</graphml>
