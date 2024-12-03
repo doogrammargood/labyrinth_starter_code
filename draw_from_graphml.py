@@ -69,13 +69,18 @@ class graph_drawer(object):
         plt.axis("off")  # Hide axis
         plt.show(block=False)
     @classmethod
-    def get_graph_colors(cls,M, Theseus):
+    def get_graph_colors(cls,M, Theseus,explored=nx.Graph()):
         #returns two default dictionaries, vertex_color_dict and edge_color_dict that assign integers that represent colors.
+        #K is a subgraph of G that we will color
         vertex_color_dict = defaultdict(int)
         edge_color_dict = defaultdict(int)
         for s in M.S.edges:
             e = tuple(sorted(s))
             edge_color_dict[e] = 1
+
+        for v in explored.nodes:
+            vertex_color_dict[v]=2
+
         if isinstance(Theseus.location,str):
             if Theseus.location[0] == 'n':
                 vertex_color_dict[Theseus.location]=1

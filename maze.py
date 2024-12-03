@@ -1,6 +1,6 @@
 #This file contains the classes maze and known_maze for the final project for CMPS2200 intro to algorithms.
 from draw_from_graphml import *
-from algorithms import *
+from maze_design_algorithms import *
 import math
 import csv
 
@@ -19,9 +19,10 @@ class maze(object):
     def __init__(self, filename=None):
         if not filename is None:
             self.G, self.pos = parse_graphml_with_positions(filename)
-        self.S = nx.random_spanning_tree(self.G)
+        #self.S = nx.random_spanning_tree(self.G)
+        self.S = random_spanning_tree(self.G)
         self.entrance = "n1"
-        self.exit = "n"+ str(self.G.number_of_nodes()+1)
+        self.exit = "n"+ str(self.G.number_of_nodes())
         self.D=nx.Graph()
         self.update_D()
 
@@ -29,9 +30,7 @@ class maze(object):
         #updates the graph D by using G and S to place all of the deadends.
         #also updates posD and edgeD
         self.D = self.G.copy() #copy G
-        print("edgesofD", len(self.D.edges))
         self.D.remove_edges_from([e for e in self.G.edges if not e in self.S.edges])#remove the closed edges
-        print("edgesofD", len(self.D.edges))
         self.posD = self.pos.copy()
         self.edgeD=defaultdict()
         counter = 1 #counter to generate the names of the deadends
@@ -165,9 +164,9 @@ class known_maze(maze):
     def unexplored_edges(self):
         #returns a list of pairs (node1,i) and a dictionary,edge_info.
         #the pairs are pairs of vertex/neighbor that have not been explored.
-        #The dictionary has these pairs as its keys and the (node2,l) as its values, where l is the length of the edge
+        #edge_info has these pairs as its keys and the (node2,l) as its values, where l is the length of the edge
         pairs_to_return=[]
-        for v in self.explored.vertices:
+        for v in self.explored.nodes:
             for i in range(self.M.get_degree_of_node(v)):
                 if not i in self.explored_choices[v]:
                     pairs_to_return.append((v,i))
@@ -213,10 +212,14 @@ class hero(object):
             return length * (1- progress)
         else:
             return 0
-
+        
+    #This function is complicated because I want to allow multiple heros, and 
+    #I want to know exactly where each hero is every time a hero is at a node.
+    #So that the process can be animated.
+    
     def update_location(self,time_elapsed):
         #expects time_elapsed to be a nonnegative float.
-        #The hero moves along its edge it is on an edge.
+        #The hero moves along its edge if it is on an edge.
         #Otherwise, if they're on a node, they stay still.
         if isinstance(self.location, tuple): #if they're on an edge...
             node1, node2, progress = self.location #unpack the location.
@@ -242,26 +245,27 @@ class hero(object):
   
     def enter_node(self):
         #if the hero is on an edge but is ready to enter a node, then we call this function to put them on the node
+        #Updates explored choices.
         #returns None.
         if isinstance(self.location,tuple):#if the hero is on an edge
             node1,node2,progress = self.location #unpack the location.
             if progress == 1: #if the hero has traversed the entire edge...
-                self.location = node2 #put them at the second node.              
+                self.location = node2 #put them at the second node.
+                #update_explored_choices              
+                n = self.K.M.get_number_from_neighbor(node1,node2)
+                if n not in self.K.explored_choices[node1]:
+                    self.K.explored_choices[node1].append(n)
+                m = self.K.M.get_number_from_neighbor(node2,node1)
+                if m not in self.K.explored_choices[node2]:
+                    self.K.explored_choices[node2].append(m)
+            self.K.add_edge(node1,node2) #we've now explored this edge.
 
 
     def enter_edge(self, neighbor_number):
         #Moves a hero from a node to an incident edge.\
-        #Updates explored choices.
         assert isinstance(self.location, str) #The hero can only enter an edge if they're at a node
         node2 = self.K.M.get_neighbor_from_number(self.location, neighbor_number)
         node1 = self.location
-        self.K.add_edge(node1,node2) #we've now explored this edge.
-        n = self.K.M.get_number_from_neighbor(node1,node2)
-        if n not in self.K.explored_choices[node1]:
-            self.K.explored_choices[node1].append(n)
-        m = self.K.M.get_number_from_neighbor(node2,node1)
-        if m not in self.K.explored_choices[node2]:
-            self.K.explored_choices[node2].append(m)
         self.location = (node1,node2,0.0)
 
     def explore_edge(self,neighbor_number):
@@ -272,6 +276,29 @@ class hero(object):
         time = self.time_til_arrival()
         self.update_location(time)
         assert isinstance(self.location, str) #we should be at the next node after this.
+
+    def explore_node(self, neighbor):
+        #moves a hero to neighbor.
+        if self.location==neighbor:#we're already there.
+            return
+        assert self.K.M.D.has_edge(neighbor, self.location) #be sure that there's actually an edge here.
+        neighbor_number = self.K.M.get_number_from_neighbor(self.location, neighbor)
+        self.explore_edge(neighbor_number)
+
+    def travel_to_node(self,node):
+        #moves the hero to node via the shortest path.
+        #recover_path_from_shortest_distances(self, self.K.shortest_distances, self.location, node)
+        if self.location == node:
+            return None
+        path = recover_path_from_shortest_distances(self.K,self.K.shortest_distances, self.location, node)
+        for p in path:
+            self.explore_node(p)
+        # print("debugging", path)
+        # while self.location != node:
+        #     print(path)
+        #     print('bugger', self.location, node)
+        #     x=path.pop()
+        #     self.explore_node(x)
 
     def ponder_choices(self):
         print(f"Thesus is at {self.location} at {self.K.pos[self.location]}.")
@@ -290,17 +317,25 @@ class hero(object):
                 self.explore_edge(n)
                 return
 
-M= maze(filename="maze_graphs/maze3.graphml")
-K=known_maze(M)
-Theseus= hero(K)
+    def print_stats(self):
+        #prints the metric attributes.
+        print(f"travel distance: {self.travel_distance}")
+        print(f"exploration distance: {self.exploration_distance}")
+        print(f"number of deadends: {self.dead_ends_encountered}")
+def text_explore(M,Theseus):
+    #expects M to be a maze and Theseus to be a hero in the maze.
+    while(Theseus.location != M.exit):
+        Theseus.ponder_choices()
+        Theseus.make_choice()
+        vertex_color_dict,edge_color_dict = graph_drawer.get_graph_colors(M,Theseus)
+        drawing.recolor_graph(vertex_color_dict, edge_color_dict)
 
-vertex_color_dict,edge_color_dict = graph_drawer.get_graph_colors(M,Theseus)
-drawing = graph_drawer(M.G, M.pos, vertex_color_dict, edge_color_dict)
 
-#print(M.get_degree_of_node('n1'))
-while(Theseus.location != M.exit):
-    Theseus.ponder_choices()
-    Theseus.make_choice()
+if __name__=="__main__":
+    M= maze(filename="maze_graphs/maze3.graphml")
+    K=known_maze(M)
+    Theseus= hero(K)
+
     vertex_color_dict,edge_color_dict = graph_drawer.get_graph_colors(M,Theseus)
-    drawing.recolor_graph(vertex_color_dict, edge_color_dict)
-
+    drawing = graph_drawer(M.G, M.pos, vertex_color_dict, edge_color_dict)
+    text_explore(M,Theseus)    

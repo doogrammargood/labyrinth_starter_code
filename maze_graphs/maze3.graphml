@@ -13,402 +13,402 @@
   <key id="Pigale/E/" for="edge" attr.name="Width" attr.type="string"/>
   <graph id="graph3" edgedefault="undirected">
     <node id="n1">
-      <data key="Pigale/V/">265.185,28</data>
+      <data key="Pigale/V/">481.027,31</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">1</data>
     </node>
     <node id="n2">
-      <data key="Pigale/V/">838,219.106</data>
+      <data key="Pigale/V/">1417.79,226.266</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">2</data>
     </node>
     <node id="n3">
-      <data key="Pigale/V/">492.85,754</data>
+      <data key="Pigale/V/">853.34,772.801</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">3</data>
     </node>
     <node id="n4">
-      <data key="Pigale/V/">-10,446.823</data>
+      <data key="Pigale/V/">31,458.938</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">4</data>
     </node>
     <node id="n5">
-      <data key="Pigale/V/">259.104,63.6667</data>
+      <data key="Pigale/V/">471.082,67.443</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">5</data>
     </node>
     <node id="n6">
-      <data key="Pigale/V/">498.913,121.147</data>
+      <data key="Pigale/V/">863.255,126.174</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">6</data>
     </node>
     <node id="n7">
-      <data key="Pigale/V/">798.075,268.248</data>
+      <data key="Pigale/V/">1352.49,276.477</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">7</data>
     </node>
     <node id="n8">
-      <data key="Pigale/V/">759.742,308.772</data>
+      <data key="Pigale/V/">1289.81,317.883</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">8</data>
     </node>
     <node id="n9">
-      <data key="Pigale/V/">671.089,447.736</data>
+      <data key="Pigale/V/">1144.83,459.871</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">9</data>
     </node>
     <node id="n10">
-      <data key="Pigale/V/">471.832,721.548</data>
+      <data key="Pigale/V/">818.969,739.643</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">10</data>
     </node>
     <node id="n11">
-      <data key="Pigale/V/">47.0365,447.784</data>
+      <data key="Pigale/V/">124.275,459.92</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">11</data>
     </node>
     <node id="n12">
-      <data key="Pigale/V/">284.56,118.964</data>
+      <data key="Pigale/V/">512.712,123.944</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">12</data>
     </node>
     <node id="n13">
-      <data key="Pigale/V/">518.339,209.547</data>
+      <data key="Pigale/V/">895.025,216.499</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">13</data>
     </node>
     <node id="n14">
-      <data key="Pigale/V/">436.348,133.609</data>
+      <data key="Pigale/V/">760.939,138.907</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">14</data>
     </node>
     <node id="n15">
-      <data key="Pigale/V/">258.015,102.279</data>
+      <data key="Pigale/V/">469.302,106.896</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">15</data>
     </node>
     <node id="n16">
-      <data key="Pigale/V/">704.55,346.943</data>
+      <data key="Pigale/V/">1199.55,356.885</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">16</data>
     </node>
     <node id="n17">
-      <data key="Pigale/V/">702.134,389.434</data>
+      <data key="Pigale/V/">1195.6,400.301</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">17</data>
     </node>
     <node id="n18">
-      <data key="Pigale/V/">730.714,317.944</data>
+      <data key="Pigale/V/">1242.33,327.254</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">18</data>
     </node>
     <node id="n19">
-      <data key="Pigale/V/">466.92,670.676</data>
+      <data key="Pigale/V/">810.935,687.664</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">19</data>
     </node>
     <node id="n20">
-      <data key="Pigale/V/">310.651,605.289</data>
+      <data key="Pigale/V/">718.439,681.364</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">20</data>
     </node>
     <node id="n21">
-      <data key="Pigale/V/">138.738,487.396</data>
+      <data key="Pigale/V/">342.844,524.202</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">21</data>
     </node>
     <node id="n22">
-      <data key="Pigale/V/">187.165,425.336</data>
+      <data key="Pigale/V/">353.436,436.984</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">22</data>
     </node>
     <node id="n23">
-      <data key="Pigale/V/">195.839,334.143</data>
+      <data key="Pigale/V/">367.621,343.806</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">23</data>
     </node>
     <node id="n24">
-      <data key="Pigale/V/">229.101,246.771</data>
+      <data key="Pigale/V/">422.016,254.532</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">24</data>
     </node>
     <node id="n25">
-      <data key="Pigale/V/">256.56,185.895</data>
+      <data key="Pigale/V/">466.922,192.332</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">25</data>
     </node>
     <node id="n26">
-      <data key="Pigale/V/">338.005,168.43</data>
+      <data key="Pigale/V/">600.113,174.486</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">26</data>
     </node>
     <node id="n27">
-      <data key="Pigale/V/">502.74,268.164</data>
+      <data key="Pigale/V/">869.515,276.391</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">27</data>
     </node>
     <node id="n28">
-      <data key="Pigale/V/">536.164,256.318</data>
+      <data key="Pigale/V/">924.174,264.287</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">28</data>
     </node>
     <node id="n29">
-      <data key="Pigale/V/">591.227,330.353</data>
+      <data key="Pigale/V/">1014.22,339.933</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">29</data>
     </node>
     <node id="n30">
-      <data key="Pigale/V/">646.993,361.081</data>
+      <data key="Pigale/V/">1105.42,371.331</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">30</data>
     </node>
     <node id="n31">
-      <data key="Pigale/V/">583.596,288.142</data>
+      <data key="Pigale/V/">1001.74,296.804</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">31</data>
     </node>
     <node id="n32">
-      <data key="Pigale/V/">663.119,326.106</data>
+      <data key="Pigale/V/">1131.79,335.594</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">32</data>
     </node>
     <node id="n33">
-      <data key="Pigale/V/">628.658,411.724</data>
+      <data key="Pigale/V/">1075.44,423.076</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">33</data>
     </node>
     <node id="n34">
-      <data key="Pigale/V/">554.4,504.088</data>
+      <data key="Pigale/V/">953.996,517.45</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">34</data>
     </node>
     <node id="n35">
-      <data key="Pigale/V/">470.072,610.478</data>
+      <data key="Pigale/V/">802.171,621.195</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">35</data>
     </node>
     <node id="n36">
-      <data key="Pigale/V/">425.087,624.07</data>
+      <data key="Pigale/V/">749.483,641.036</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">36</data>
     </node>
     <node id="n37">
-      <data key="Pigale/V/">309.041,562.914</data>
+      <data key="Pigale/V/">552.747,577.556</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">37</data>
     </node>
     <node id="n38">
-      <data key="Pigale/V/">441.437,663.391</data>
+      <data key="Pigale/V/">767.274,667.324</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">38</data>
     </node>
     <node id="n39">
-      <data key="Pigale/V/">233.801,516.844</data>
+      <data key="Pigale/V/">429.703,530.483</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">39</data>
     </node>
     <node id="n40">
-      <data key="Pigale/V/">205.555,461.068</data>
+      <data key="Pigale/V/">383.51,473.494</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">40</data>
     </node>
     <node id="n41">
-      <data key="Pigale/V/">270.246,446.478</data>
+      <data key="Pigale/V/">489.303,458.586</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">41</data>
     </node>
     <node id="n42">
-      <data key="Pigale/V/">289.248,387.562</data>
+      <data key="Pigale/V/">520.379,398.388</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">42</data>
     </node>
     <node id="n43">
-      <data key="Pigale/V/">223.75,376.153</data>
+      <data key="Pigale/V/">413.265,386.73</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">43</data>
     </node>
     <node id="n44">
-      <data key="Pigale/V/">264.621,348.685</data>
+      <data key="Pigale/V/">480.104,358.665</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">44</data>
     </node>
     <node id="n45">
-      <data key="Pigale/V/">270.977,318.152</data>
+      <data key="Pigale/V/">490.498,327.467</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">45</data>
     </node>
     <node id="n46">
-      <data key="Pigale/V/">222.509,335.533</data>
+      <data key="Pigale/V/">411.235,345.226</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">46</data>
     </node>
     <node id="n47">
-      <data key="Pigale/V/">245.38,272.87</data>
+      <data key="Pigale/V/">448.638,281.2</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">47</data>
     </node>
     <node id="n48">
-      <data key="Pigale/V/">313.651,270.908</data>
+      <data key="Pigale/V/">560.286,279.195</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">48</data>
     </node>
     <node id="n49">
-      <data key="Pigale/V/">275.836,220.253</data>
+      <data key="Pigale/V/">498.444,227.437</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">49</data>
     </node>
     <node id="n50">
-      <data key="Pigale/V/">353.999,280.686</data>
+      <data key="Pigale/V/">626.269,289.186</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">50</data>
     </node>
     <node id="n51">
-      <data key="Pigale/V/">336.471,226.111</data>
+      <data key="Pigale/V/">610.531,238.382</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">51</data>
     </node>
     <node id="n52">
-      <data key="Pigale/V/">457.302,257.723</data>
+      <data key="Pigale/V/">795.206,265.723</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">52</data>
     </node>
     <node id="n53">
-      <data key="Pigale/V/">431.531,347.843</data>
+      <data key="Pigale/V/">753.062,357.805</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">53</data>
     </node>
     <node id="n54">
-      <data key="Pigale/V/">330.353,339.076</data>
+      <data key="Pigale/V/">587.599,348.846</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">54</data>
     </node>
     <node id="n55">
-      <data key="Pigale/V/">394.587,310.206</data>
+      <data key="Pigale/V/">692.645,319.348</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">55</data>
     </node>
     <node id="n56">
-      <data key="Pigale/V/">390.189,276.993</data>
+      <data key="Pigale/V/">685.453,285.412</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">56</data>
     </node>
     <node id="n57">
-      <data key="Pigale/V/">394.477,254.74</data>
+      <data key="Pigale/V/">705.391,267.635</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">57</data>
     </node>
     <node id="n58">
-      <data key="Pigale/V/">414.32,278.338</data>
+      <data key="Pigale/V/">724.915,286.787</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">58</data>
     </node>
     <node id="n59">
-      <data key="Pigale/V/">280.569,283.854</data>
+      <data key="Pigale/V/">506.184,292.423</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">59</data>
     </node>
     <node id="n60">
-      <data key="Pigale/V/">478.755,350.298</data>
+      <data key="Pigale/V/">830.29,360.313</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">60</data>
     </node>
     <node id="n61">
-      <data key="Pigale/V/">510.928,419.722</data>
+      <data key="Pigale/V/">882.905,431.248</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">61</data>
     </node>
     <node id="n62">
-      <data key="Pigale/V/">578.515,374.221</data>
+      <data key="Pigale/V/">993.434,384.756</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">62</data>
     </node>
     <node id="n63">
-      <data key="Pigale/V/">546.507,320.229</data>
+      <data key="Pigale/V/">941.089,329.589</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">63</data>
     </node>
     <node id="n64">
-      <data key="Pigale/V/">550.278,433.313</data>
+      <data key="Pigale/V/">947.256,445.135</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">64</data>
     </node>
     <node id="n65">
-      <data key="Pigale/V/">509.305,538.101</data>
+      <data key="Pigale/V/">869.313,549.228</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">65</data>
     </node>
     <node id="n66">
-      <data key="Pigale/V/">404.984,597.782</data>
+      <data key="Pigale/V/">709.649,613.183</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">66</data>
     </node>
     <node id="n67">
-      <data key="Pigale/V/">339.387,546.527</data>
+      <data key="Pigale/V/">602.374,560.813</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">67</data>
     </node>
     <node id="n68">
-      <data key="Pigale/V/">285.613,483.073</data>
+      <data key="Pigale/V/">514.433,495.977</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">68</data>
     </node>
     <node id="n69">
-      <data key="Pigale/V/">337.447,441.07</data>
+      <data key="Pigale/V/">599.201,453.061</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">69</data>
     </node>
     <node id="n70">
-      <data key="Pigale/V/">413.577,410.353</data>
+      <data key="Pigale/V/">723.701,421.675</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">70</data>
     </node>
     <node id="n71">
-      <data key="Pigale/V/">456.631,389.697</data>
+      <data key="Pigale/V/">794.109,400.57</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">71</data>
     </node>
     <node id="n72">
-      <data key="Pigale/V/">350.703,495.62</data>
+      <data key="Pigale/V/">620.879,508.797</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">72</data>
     </node>
     <node id="n73">
-      <data key="Pigale/V/">416.849,489.043</data>
+      <data key="Pigale/V/">729.051,502.078</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">73</data>
     </node>
     <node id="n74">
-      <data key="Pigale/V/">483.171,494.661</data>
+      <data key="Pigale/V/">837.513,507.818</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">74</data>
     </node>
     <node id="n75">
-      <data key="Pigale/V/">466.629,534.18</data>
+      <data key="Pigale/V/">810.46,548.196</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">75</data>
     </node>
     <node id="n76">
-      <data key="Pigale/V/">433.901,516.348</data>
+      <data key="Pigale/V/">756.938,529.977</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">76</data>
     </node>
     <node id="n77">
-      <data key="Pigale/V/">437.436,539.69</data>
+      <data key="Pigale/V/">762.718,553.827</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">77</data>
     </node>
     <node id="n78">
-      <data key="Pigale/V/">408.63,567.044</data>
+      <data key="Pigale/V/">715.61,581.776</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">78</data>
     </node>
     <node id="n79">
-      <data key="Pigale/V/">368.267,539.953</data>
+      <data key="Pigale/V/">649.603,554.095</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">79</data>
     </node>
     <node id="n80">
-      <data key="Pigale/V/">409.811,521.741</data>
+      <data key="Pigale/V/">717.542,535.487</data>
       <data key="Pigale/V/">5</data>
       <data key="Pigale/V/">80</data>
     </node>
