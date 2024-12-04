@@ -17,7 +17,6 @@ Here, we give an overview of the files and the notable classes and functions in 
 | |graph_drawer(class)|Draws graphs with matplotlib. Handles updating the drawing.|
 |maze_design algorithms|fisher_shuffle*|Creates a uniformly random permutation.|
 | |kruskals*|Finds a minimal spanning tree.|
-| |update_shortest_distances|Maintains a dictionary of all-pairs shortest paths.|
 | |recover_path_from_shortest_distances|gives the shortest path between known nodes.|
 |maze|maze(class)|Represents the physical maze with some closed edges.|
 | |known_maze(class)|Represents our knowledge of the maze.|
