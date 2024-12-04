@@ -7,7 +7,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-def parse_graphml_with_positions(file_path):
+def parse_graph(file_path):
     """Parse a Pigale-specific GraphML file and extract graph + positions."""
     # Parse the GraphML file
     tree = ET.parse(file_path)
@@ -44,52 +44,60 @@ def parse_graphml_with_positions(file_path):
 class graph_drawer(object):
     #attributes are edges and nodes, both nx objects. Edges need to be sorted (n1,n2), where n1<n2 are strings.
     #and vertex_color_choices, edge_color_choices, a list of colors to paint the edges/vertices. 
+    #and Theseus, a hero.
+    #and marked_nodes, a list of nodes to color specially for whatever reason.
 
-    def __init__(self,G,pos,vertex_color_dict,edge_color_dict):
+    def __init__(self,Theseus):
         #Assume G is a graph, pos is a dictionary from G to R^2 that give the positions of the nodes.
-        #edge_color_dict is a dictionary from edges to integers that will be turned into colors.
-        #vertex color dict has vertices as colors and integers as as values.
-        self.G= G
+
+        self.G= Theseus.K.M.G
+        self.Theseus = Theseus
+        self.marked_nodes= []
+        vertex_color_dict,edge_color_dict = self.get_graph_colors()
         self.edge_color_choices = ["pink", "green","red"]
-        self.vertex_color_choices = ["skyblue","red","black"]
+        self.vertex_color_choices = ["skyblue","red","blue","black"]
         # Draw graph using positions
         plt.figure(figsize=(12, 12))
-
         # Draw nodes
-        colors = [self.vertex_color_choices[vertex_color_dict[node]] for node in G.nodes]
-        self.nodes = nx.draw_networkx_nodes(G, pos, node_color=colors, node_size=100)
+        colors = [self.vertex_color_choices[vertex_color_dict[node]] for node in self.G.nodes]
+        self.nodes = nx.draw_networkx_nodes(self.G, Theseus.K.M.pos, node_color=colors, node_size=100)
         
         # Draw edges
-        edge_colors = [self.edge_color_choices[edge_color_dict[tuple(sorted(edge))]] for edge in G.edges]
-        self.edges = nx.draw_networkx_edges(G, pos, edge_color=edge_colors)
+        edge_colors = [self.edge_color_choices[edge_color_dict[tuple(sorted(edge))]] for edge in self.G.edges]
+        self.edges = nx.draw_networkx_edges(self.G, Theseus.K.M.pos, edge_color=edge_colors)
         
         # Write labels
-        nx.draw_networkx_labels(G, pos, font_size=12)
+        nx.draw_networkx_labels(self.G, Theseus.K.M.pos, font_size=12)
         plt.ion()  # Interactive mode for dynamic updates
         plt.axis("off")  # Hide axis
         plt.show(block=False)
-    @classmethod
-    def get_graph_colors(cls,M, Theseus,explored=nx.Graph()):
+        plt.pause(0.1)
+
+    def get_graph_colors(self):
         #returns two default dictionaries, vertex_color_dict and edge_color_dict that assign integers that represent colors.
         #K is a subgraph of G that we will color
         vertex_color_dict = defaultdict(int)
         edge_color_dict = defaultdict(int)
-        for s in M.S.edges:
+        for s in self.Theseus.K.M.S.edges:
             e = tuple(sorted(s))
             edge_color_dict[e] = 1
 
-        for v in explored.nodes:
+        for v in self.Theseus.K.explored.nodes:
             vertex_color_dict[v]=2
 
-        if isinstance(Theseus.location,str):
-            if Theseus.location[0] == 'n':
-                vertex_color_dict[Theseus.location]=1
+        for v in self.marked_nodes:
+            vertex_color_dict[v]=3
+
+        if isinstance(self.Theseus.location,str):
+            if self.Theseus.location[0] == 'n':
+                vertex_color_dict[self.Theseus.location]=1
             else: #Theseus is at a dead end.
-                edge_color_dict[tuple(sorted(M.edgeD[Theseus.location]))] = 2
-        elif isinstance(Theseus.location, tuple):
-            edge = tuple(sorted((Theseus.location[0],Theseus.location[1])))
+                edge_color_dict[tuple(sorted(self.Theseus.K.M.edgeD[self.Theseus.location]))] = 2
+        elif isinstance(self.Theseus.location, tuple):
+            edge = tuple(sorted((self.Theseus.location[0],self.Theseus.location[1])))
             edge_color_dict[edge]=2
         return vertex_color_dict, edge_color_dict
+    
     def recolor_graph(self,vertex_color_dict,edge_color_dict):
         #called after draw_graph to update it with new colors.
         edge_colors = [self.edge_color_choices[edge_color_dict[tuple(sorted(edge))]] for edge in self.G.edges]
@@ -97,6 +105,10 @@ class graph_drawer(object):
         colors = [self.vertex_color_choices[vertex_color_dict[node]] for node in self.G.nodes]
         self.nodes.set_color(colors)
 
+    def update_graph(self):
+        vertex_color_dict,edge_color_dict = self.get_graph_colors()
+        self.recolor_graph(vertex_color_dict,edge_color_dict)
+        plt.pause(0.1)
 # Example usage
 #file_path = "maze3.graphml"  # Replace with your file path
 #visualize_graph_with_curved_edges(file_path)

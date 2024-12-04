@@ -1,9 +1,11 @@
 #This file contains the classes maze and known_maze for the final project for CMPS2200 intro to algorithms.
-from draw_from_graphml import *
+from draw_and_parse_graph import *
 from maze_design_algorithms import *
 import math
 import csv
+import random
 
+#Students shouldn't need to use any functions from this class, directly.
 class maze(object):
     '''
     The maze class contains: 
@@ -16,11 +18,16 @@ class maze(object):
         entrance . . .The name of the node that represents the entrance.
         exit . . . . .The name of the node that represents the exit.
     '''
-    def __init__(self, filename=None):
+    def __init__(self, filename=None, reopen_edges=0):
+        #filename is the graphml file that represents the graph.
+        #reopen_edges is an integer that tells how many edges to open beyond the edges of a random spanning tree.
         if not filename is None:
-            self.G, self.pos = parse_graphml_with_positions(filename)
-        #self.S = nx.random_spanning_tree(self.G)
-        self.S = random_spanning_tree(self.G)
+            self.G, self.pos = parse_graph(filename)
+        self.S = nx.random_spanning_tree(self.G)
+        #self.S = random_spanning_tree(self.G)
+        reopen_edges = min(reopen_edges, len(self.G.edges)-len(self.S.edges))
+        edges = random.sample([e for e in self.G.edges if not e in self.S.edges],reopen_edges)
+        self.S.add_edges_from(edges)
         self.entrance = "n1"
         self.exit = "n"+ str(self.G.number_of_nodes())
         self.D=nx.Graph()
@@ -37,12 +44,12 @@ class maze(object):
         for e in self.G.edges:
             if e not in self.S.edges: #loop through the closed edges
                 midpoint= self.edge_midpoint(e)
-                new_node_name = "d"+str(counter)
+                new_node_name = "d,"+str(e[0]) +"," + str(e[1])
                 self.add_node_to_D(new_node_name, midpoint, [e[0]])
                 self.posD[new_node_name]=midpoint
                 self.edgeD[new_node_name] = tuple(sorted((e[0],e[1])))
                 counter += 1
-                new_node_name = "d"+str(counter)
+                new_node_name = "d"+str(e[0]) +"," + str(e[1])
                 self.add_node_to_D(new_node_name, midpoint, [e[1]])
                 self.posD[new_node_name]=midpoint
                 self.edgeD[new_node_name] = tuple(sorted((e[0],e[1])))
@@ -130,6 +137,7 @@ class maze(object):
         except Exception as e:
             print(f"Error writing to file: {e}")
 
+#Students may need the function unexplored_nodes.
 class known_maze(maze):
     '''
     The known maze class contains
@@ -148,7 +156,7 @@ class known_maze(maze):
         self.explored.add_node(M.entrance) #add the entrance
         self.pos = {self.M.entrance: self.M.pos[self.M.entrance]}#we know where the entrance is
         self.explored_choices = defaultdict(list) #default dict: when a key is not in the dictionary, it initializes it as an empty list.
-        self.shortest_distances = defaultdict(lambda: float('inf'))
+        self.shortest_distances = defaultdict(lambda: float('inf')) #by default, all distances are infinity.
 
     def add_edge(self, node1,node2):
         #assume node1 and node2 are strings that represent adjacent nodes in the maze M.
@@ -160,11 +168,15 @@ class known_maze(maze):
 
         #update shortest_distances
         self.shortest_distances = update_shortest_distances(self,self.shortest_distances,(node1,node2), self.M.edge_length(node1,node2))
-        
+
+    def learn_all_edges(self):
+        for edge in self.M.D.edges:
+            self.add_edge(edge[0],edge[1])
+
     def unexplored_edges(self):
         #returns a list of pairs (node1,i) and a dictionary,edge_info.
-        #the pairs are pairs of vertex/neighbor that have not been explored.
-        #edge_info has these pairs as its keys and the (node2,l) as its values, where l is the length of the edge
+        #the pairs are pairs of vertex/neighbor_number that have not been explored.
+        #edge_info has these pairs as its keys and the (node2,l) as its values, where l is the length of the edge and node2 is the neighbor.
         pairs_to_return=[]
         for v in self.explored.nodes:
             for i in range(self.M.get_degree_of_node(v)):
@@ -174,8 +186,15 @@ class known_maze(maze):
         for v,i in pairs_to_return:
             node2=self.M.get_neighbor_from_number(v,i)
             length = self.M.edge_length(v,node2)
-            edge_info[(v,i)].append((node2,length))
+            edge_info[(v,i)] = (node2,length)
         return pairs_to_return,edge_info
+    
+    def unexplored_nodes(self):
+        #returns a list of edges (node1,node2) such that node1 has been explored but node2 has not.
+        pairs, info = self.unexplored_edges()
+        return [ (v, info[(v,i)][0]) for v,i in pairs if not info[(v,i)][0] in self.explored.nodes]
+
+#Students may need the functions explore_edge, explore_node (calls_explore_edge), and travel_to_node.
 class hero(object):
     '''
     The hero class contains
@@ -184,17 +203,20 @@ class hero(object):
     . . . . . . . . . . . . . or a tuple (node1,node2,progress) where (node1,node2) is an edge of the graph and progress is a float in [0,1] that represents how far along the edge the hero is.
     . . . . . . . . . . . . . When progress=0, they've only just started along the path from node1 to node2. When progress is 1, they're at node2.
     speed . . . . . . . . .The speed at which the hero travels
+    drawing . . . . . . . .A graph_drawer instance for drawing the graph.
     ----- Metric attributes----- (the following attributes are different ways to measure how much effort has been spent)
     travel_distance . . . .The total distance the hero has traveled.
     exploration_distance . The total distance the hero has explored (not counting backtracking).
     deadends_encountered . The total number of deadends that the hero has encountered.
     '''
-    def __init__(self,K,location=None,speed=1.0,travel_distance=0.0,exploration_distance=0.0,dead_ends_encountered = 0):
+    def __init__(self,K,draw = True, location=None,speed=1.0,travel_distance=0.0,exploration_distance=0.0,dead_ends_encountered = 0):
         #Assume K is a known maze.
+        #draw is a boolean that decides whether to draw the graph or not.
         #location is a string that represents a node in the maze, where the hero spawns.
         #speed is a float that represents how fast the hero moves.
         #the other arguments are the hero's metric attributes.
         self.K = K
+
         if location is None:
             self.location = K.M.entrance #By default, put the hero at the entrance.
         else:
@@ -203,6 +225,10 @@ class hero(object):
         self.travel_distance=travel_distance
         self.exploration_distance=exploration_distance
         self.dead_ends_encountered = dead_ends_encountered
+        if isinstance(draw, bool) and draw:
+            self.drawing = graph_drawer(self)
+        else:
+            self.drawing = None
 
     def time_til_arrival(self):
         #returns the time until reaching the next node.
@@ -246,6 +272,7 @@ class hero(object):
     def enter_node(self):
         #if the hero is on an edge but is ready to enter a node, then we call this function to put them on the node
         #Updates explored choices.
+        #redraws the graph
         #returns None.
         if isinstance(self.location,tuple):#if the hero is on an edge
             node1,node2,progress = self.location #unpack the location.
@@ -258,7 +285,9 @@ class hero(object):
                 m = self.K.M.get_number_from_neighbor(node2,node1)
                 if m not in self.K.explored_choices[node2]:
                     self.K.explored_choices[node2].append(m)
-            self.K.add_edge(node1,node2) #we've now explored this edge.
+                self.K.add_edge(node1,node2) #we've now explored this edge.
+                if not self.drawing is None:
+                    self.drawing.update_graph()
 
 
     def enter_edge(self, neighbor_number):
@@ -285,7 +314,7 @@ class hero(object):
         neighbor_number = self.K.M.get_number_from_neighbor(self.location, neighbor)
         self.explore_edge(neighbor_number)
 
-    def travel_to_node(self,node):
+    def travel_to_node(self,node,drawing=None):
         #moves the hero to node via the shortest path.
         #recover_path_from_shortest_distances(self, self.K.shortest_distances, self.location, node)
         if self.location == node:
@@ -293,12 +322,8 @@ class hero(object):
         path = recover_path_from_shortest_distances(self.K,self.K.shortest_distances, self.location, node)
         for p in path:
             self.explore_node(p)
-        # print("debugging", path)
-        # while self.location != node:
-        #     print(path)
-        #     print('bugger', self.location, node)
-        #     x=path.pop()
-        #     self.explore_node(x)
+            if not self.drawing is None:
+                self.drawing.update_graph()
 
     def ponder_choices(self):
         print(f"Thesus is at {self.location} at {self.K.pos[self.location]}.")
@@ -322,20 +347,7 @@ class hero(object):
         print(f"travel distance: {self.travel_distance}")
         print(f"exploration distance: {self.exploration_distance}")
         print(f"number of deadends: {self.dead_ends_encountered}")
-def text_explore(M,Theseus):
-    #expects M to be a maze and Theseus to be a hero in the maze.
-    while(Theseus.location != M.exit):
-        Theseus.ponder_choices()
-        Theseus.make_choice()
-        vertex_color_dict,edge_color_dict = graph_drawer.get_graph_colors(M,Theseus)
-        drawing.recolor_graph(vertex_color_dict, edge_color_dict)
 
 
 if __name__=="__main__":
-    M= maze(filename="maze_graphs/maze3.graphml")
-    K=known_maze(M)
-    Theseus= hero(K)
-
-    vertex_color_dict,edge_color_dict = graph_drawer.get_graph_colors(M,Theseus)
-    drawing = graph_drawer(M.G, M.pos, vertex_color_dict, edge_color_dict)
-    text_explore(M,Theseus)    
+    pass
