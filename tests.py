@@ -21,10 +21,10 @@ class Tests(TestCase):
         for trial in range(num_trials):
             shuffles[tuple(fisher_shuffle(n))]+=1
         for permutation in itertools.permutations(range(n)):
-            observed_frequencies.append(shuffles[tuple(permutation)]/num_trials)
-            expected_frequencies.append(1/math.factorial(n))
+            observed_frequencies.append(shuffles[tuple(permutation)])
+            expected_frequencies.append(num_trials/math.factorial(n))
         result = scipy.stats.chisquare(observed_frequencies,expected_frequencies)
-        assert result.pvalue >0.99
+        assert result.pvalue >0.01 #even if your shuffle is implemented correctly, this can fail 1/100 times.
     @weight(5)
     @number(2)
     @visibility(True)
@@ -44,7 +44,7 @@ class Tests(TestCase):
             depth_first_search(Theseus)
             assert Theseus.travel_distance>0
             assert Theseus.travel_distance <= 2* Theseus.exploration_distance #Each edge is travered at most twice.
-    
+            assert Theseus.location == Theseus.K.M.exit
     @weight(5)
     @number(4)
     @visibility(True)
@@ -58,15 +58,15 @@ class Tests(TestCase):
     @number(5)
     @visibility(True)
     def test_a_star(self):
-        exploration_distances = [6349.179523682272,2623.9738546780213,3781.761227509557]
+        exploration_distances = [6349.179523682272,2623.9738546780213,3781.761227509557] #correct exploration distances.
         for index, file in enumerate(graph_names):
             M= maze(filename=file,reopen_edges=float('inf')) #all edges are open
             K=known_maze(M)
             Theseus=hero(K,draw=False)
             a_star_search(Theseus)
             assert Theseus.exploration_distance==exploration_distances[index]
+            assert Theseus.location == Theseus.K.M.exit
+
 if __name__=="__main__":
-    t = Tests()
-    #t.test_fisher_shuffle()
     #t.test_a_star()
     unittest.main()

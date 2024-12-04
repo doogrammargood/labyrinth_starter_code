@@ -9,6 +9,7 @@ def run_all_dfs():
         K=known_maze(M)
         Theseus=hero(K)
         depth_first_search(Theseus)
+        Theseus.print_stats()
 def run_all_a_star():
     #runs A* on all the graph mazes and displays it.
     for file in graph_names:
@@ -16,6 +17,13 @@ def run_all_a_star():
         K=known_maze(M)
         Theseus=hero(K)
         a_star_search(Theseus)
+        Theseus.print_stats()
+
+def run_lp_shortest_paths():
+    for i, file in enumerate(graph_names):
+        M=maze(filename=file, reopen_edges=float('inf'))
+        dist_to_exit = linear_programming_shortest_path(M,M.entrance,M.exit)
+        print(f'When all edges are open, the shortest path to the exit of maze {i} is', dist_to_exit)
 def text_explore():
     #provides a text-based interface to explore the maze.
     #Could be useful to get a feel for the functions available.
@@ -32,4 +40,5 @@ def text_explore():
         drawing.recolor_graph(vertex_color_dict, edge_color_dict)
 if __name__=="__main__":
     run_all_dfs()
-    #run_all_a_star()
+    run_all_a_star()
+    run_lp_shortest_paths()

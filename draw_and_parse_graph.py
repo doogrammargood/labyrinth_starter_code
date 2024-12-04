@@ -55,7 +55,7 @@ class graph_drawer(object):
         self.marked_nodes= []
         vertex_color_dict,edge_color_dict = self.get_graph_colors()
         self.edge_color_choices = ["pink", "green","red"]
-        self.vertex_color_choices = ["skyblue","red","blue","black"]
+        self.vertex_color_choices = ["skyblue","red","blue","darkblue", "black"]
         # Draw graph using positions
         plt.figure(figsize=(12, 12))
         # Draw nodes
@@ -88,6 +88,7 @@ class graph_drawer(object):
         for v in self.marked_nodes:
             vertex_color_dict[v]=3
 
+        vertex_color_dict[self.Theseus.K.M.exit]=4
         if isinstance(self.Theseus.location,str):
             if self.Theseus.location[0] == 'n':
                 vertex_color_dict[self.Theseus.location]=1

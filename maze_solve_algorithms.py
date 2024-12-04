@@ -91,15 +91,3 @@ def linear_programming_shortest_path(M,node1,node2):
     result = scipy.optimize.linprog(np.array(c),A_eq=np.array(A), b_eq = np.array(b), bounds = (0,1), method = 'highs')
     return(result['fun'])
     #The values of the 
-
-if __name__=="__main__":
-    M= maze(filename="maze_graphs/maze3.graphml",reopen_edges = float('inf'))
-    linear_programming_shortest_path(M,M.entrance,M.exit)
-    # K=known_maze(M)
-    # Theseus=hero(K)
-    # vertex_color_dict,edge_color_dict = graph_drawer.get_graph_colors(M,Theseus)
-    # drawing = graph_drawer(M.G, M.pos, vertex_color_dict, edge_color_dict)
-    # plt.pause(0.1)
-    #a_star_search(Theseus,drawing)
-    #depth_first_search(Theseus,drawing)
-    #linear_programming_shortest_path(M)

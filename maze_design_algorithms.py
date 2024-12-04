@@ -57,7 +57,7 @@ def update_shortest_distances(K,shortest_distances,new_edge,new_edge_distance):
     #shortest_distances . . .a default dictionary with default value float('inf') 
     # . . . . . . . . . . . . . . that has pairs (node1,node2) as keys and shortest distances through the graph as values.
     #new_edge_distance. . . .the new_distance of the node.
-    #returns none
+    #returns shortest distances after updating it.
     node1,node2 = new_edge
     shortest_distances[(node1,node2)] = min(shortest_distances[(node1,node2)], new_edge_distance)
     for x in K.explored.nodes:
