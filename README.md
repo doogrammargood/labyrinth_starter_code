@@ -26,4 +26,4 @@ Here, we give an overview of the files and the notable classes and functions in 
 | |a_star_search*|Causes hero to search the graph using a_star_algorithm.|  
 | |linear_programming_shortest_path*|Finds the shortest path through a known maze with LP.|
 |examples|text_explore|draws the graph as you move through it by text.|
-|tests|Tests(class)|Tests the code.|
+|tests|Tests(class)|Tests the code.|# labyrinth_starter_code
