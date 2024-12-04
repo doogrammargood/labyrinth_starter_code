@@ -7,7 +7,7 @@ graph_names = [f"maze_graphs/maze{i}.graphml" for i in [1,2,3]]
 import itertools
 class Tests(TestCase):
 
-    @weight(5)
+    @weight(10)
     @number(1)
     @visibility(True)
     def test_fisher_shuffle(self):
@@ -25,15 +25,21 @@ class Tests(TestCase):
             expected_frequencies.append(num_trials/math.factorial(n))
         result = scipy.stats.chisquare(observed_frequencies,expected_frequencies)
         assert result.pvalue >0.01 #even if your shuffle is implemented correctly, this can fail 1/100 times.
-    @weight(5)
+    @weight(10)
     @number(2)
     @visibility(True)
-    def test_spanning_tree(self):
+    def test_minimal_spanning_tree(self):
         #checks that the alleged spanning tre created in __init__ has 1 fewer edge than vertices.
-        M= maze(filename="maze_graphs/maze3.graphml")
-        assert len(M.G.nodes) == len(M.S.edges)+1
+        minimal_spanning_trees = [9465.301381459423,13011.154937848629,7399.7810979449]
+        for i, file in enumerate(graph_names):
+            M=maze(file,reopen_edges=float('inf'))
+            edge_weights = {e: M.edge_length(e[0],e[1]) for e in M.G.edges}
+            result = kruskals(M.G, edge_weights)
+            value = sum([M.edge_length(e[0],e[1]) for e in result.edges])
+            assert value == minimal_spanning_trees[i]
+            assert len(M.G.nodes) == len(result.edges)+1
 
-    @weight(5)
+    @weight(10)
     @number(3)
     @visibility(True)
     def test_dfs(self):
@@ -45,7 +51,7 @@ class Tests(TestCase):
             assert Theseus.travel_distance>0
             assert Theseus.travel_distance <= 2* Theseus.exploration_distance #Each edge is travered at most twice.
             assert Theseus.location == Theseus.K.M.exit
-    @weight(5)
+    @weight(10)
     @number(4)
     @visibility(True)
     def test_shortest_path(self):
@@ -54,7 +60,7 @@ class Tests(TestCase):
         K.learn_all_edges()
         assert abs(K.shortest_distances[(M.entrance,M.exit)] - linear_programming_shortest_path(M,M.entrance,M.exit))<0.01 #there could be some rounding error, but these quantities should be close.
         
-    @weight(5)
+    @weight(10)
     @number(5)
     @visibility(True)
     def test_a_star(self):
@@ -68,5 +74,7 @@ class Tests(TestCase):
             assert Theseus.location == Theseus.K.M.exit
 
 if __name__=="__main__":
+    t = Tests()
+    t.test_minimal_spanning_tree()
     #t.test_a_star()
-    unittest.main()
+    #unittest.main()

@@ -23,8 +23,9 @@ class maze(object):
         #reopen_edges is an integer that tells how many edges to open beyond the edges of a random spanning tree.
         if not filename is None:
             self.G, self.pos = parse_graph(filename)
-        self.S = nx.random_spanning_tree(self.G)
-        #self.S = random_spanning_tree(self.G)
+        #self.S = nx.random_spanning_tree(self.G)
+        self.S = random_spanning_tree(self.G)
+        self.S = nx.Graph(self.S)
         reopen_edges = min(reopen_edges, len(self.G.edges)-len(self.S.edges))
         edges = random.sample([e for e in self.G.edges if not e in self.S.edges],reopen_edges)
         self.S.add_edges_from(edges)
