@@ -12,7 +12,7 @@ The algorithms to implement for the project belong in maze_solve_algorithms and 
 Here, we give an overview of the files and the notable classes and functions in each file. The files are listed in order, so that each file imports all of the previous files. The students must write the functions labeled with *.
 
 |File|Important classes/functions|What they do|
------------------------------------------------
+|----|---------------------------|------------|
 |draw_and_parse_graph|parse_graph|Creates a Networkx graph from graphml file.|
 | |graph_drawer(class)|Draws graphs with matplotlib. Handles updating the drawing.|
 |maze_design algorithms|fisher_shuffle*|Creates a uniformly random permutation.|
