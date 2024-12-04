@@ -3,45 +3,21 @@
 import numpy as np
 def fisher_shuffle(n):
     #returns a uniformly random permutation of the list [0..n]
-    to_return = []
-    unstruct_numbers = list(range(n))
-    for k in range(n)[::-1]:
-        random_index = np.random.randint(k+1)
-        random_value = unstruct_numbers[random_index]
-        to_return.append(random_value)
-        unstruct_numbers.remove(random_value)
-    return to_return
+    #TODO
+    pass
 
 def kruskals(G, edge_weights):
     #expects G to be a networkx graph. 
     #expects edge_weights to be nonnegative weights of G
     #returns a networkx spanning tree of G.
-    edges = sorted(G.edges,key=lambda edge: edge_weights[edge] ) #sort edges by weight.
-    spanning_tree_edges = []
-    components = {} #a dictionary to store representatives for each connected component.
-    for node in G.nodes:
-        components[node]=node
+    #TODO
     def get_component(node,components):
         #repeatedly calls component until the answer stabilizes.
         #returns a node in the connected component of node that represents the connected component.
         #updates the values of components for all keys queried along the way to point to this representative.
-        comp=None
-        next_comp= node
-        nodes_along_way = [node]
-        while comp != next_comp:
-            comp = next_comp
-            next_comp = components[next_comp]
-            nodes_along_way.append(comp)
-            
-        for intermediate_node in nodes_along_way:
-            components[intermediate_node]=comp
-        return comp
+        pass
     for edge in edges:
-        node1,node2 = edge
-        if get_component(node1,components)!=get_component(node2,components):
-            spanning_tree_edges.append(tuple(sorted(edge)))
-            components[get_component(node2,components)]=node1
-    return G.edge_subgraph(spanning_tree_edges)
+        pass
 
 def random_spanning_tree(G):
     #expect G to be a networkx graph.
