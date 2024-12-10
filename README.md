@@ -9,7 +9,7 @@ Finally, we have a "hero" class that keeps track of distance traveled and deaden
 
 The algorithms to implement for the project belong in maze_solve_algorithms and maze.
 
-Here, we give an overview of the files and the notable classes and functions in each file. The files are listed in order, so that each file imports all of the previous files. The students must write the functions labeled with *.
+Here, we give an overview of the files and the notable classes and functions in each file. The files are listed in order, so that each file imports some of the previous files. The students must write the functions labeled with *.
 
 |File|Important classes/functions|What they do|
 |----|---------------------------|------------|
@@ -25,4 +25,4 @@ Here, we give an overview of the files and the notable classes and functions in 
 | |a_star_search*|Causes hero to search the graph using a_star_algorithm.|  
 | |linear_programming_shortest_path*|Finds the shortest path through a known maze with LP.|
 |examples|text_explore|draws the graph as you move through it by text.|
-|tests|Tests(class)|Tests the code.|# labyrinth_starter_code
+|tests|Tests(class)|Tests the code.|

@@ -4,13 +4,16 @@ import numpy as np
 def fisher_shuffle(n):
     #returns a uniformly random permutation of the list [0..n-1]
     #you can use  np.random.randint(a) to select a uniformly random number in the range [0..a-1]
+    #TODO
     pass
 
 def kruskals(G, edge_weights):
     #expects G to be a networkx graph. 
     #expects edge_weights to be dictionary whose keys are nodes and values are nonnegative weights of G
     #returns a networkx spanning tree of G.
+    #TODO
     def get_component(node,components):
+        #components is a dictionary whose keys are nodes and values are nodes in the connected component of the key.
         #repeatedly calls component until the answer stabilizes.
         #returns a node in the connected component of node that represents the connected component.
         #updates the values of components for all keys queried along the way to point to this representative.
@@ -34,7 +37,7 @@ def update_shortest_distances(K,shortest_distances,new_edge,new_edge_distance):
     #shortest_distances . . .a default dictionary with default value infinity
     # . . . . . . . . . . . . . . that has pairs (node1,node2) as keys and shortest distances through the graph as values.
     #new_edge_distance. . . .the new_distance of the node.
-    #returns shortest distances after updating it.
+    #returns shortest distances after updating K.explored with new_edge.
     node1,node2 = new_edge
     shortest_distances[(node1,node2)] = min(shortest_distances[(node1,node2)], new_edge_distance)
     for x in K.explored.nodes:

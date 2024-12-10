@@ -36,7 +36,7 @@ class Tests(TestCase):
             edge_weights = {e: M.edge_length(e[0],e[1]) for e in M.G.edges}
             result = kruskals(M.G, edge_weights)
             value = sum([M.edge_length(e[0],e[1]) for e in result.edges])
-            assert value == minimal_spanning_trees[i]
+            assert abs(value - minimal_spanning_trees[i])<0.01
             assert len(M.G.nodes) == len(result.edges)+1
 
     @weight(10)
@@ -70,7 +70,7 @@ class Tests(TestCase):
             K=known_maze(M)
             Theseus=hero(K,draw=False)
             a_star_search(Theseus)
-            assert Theseus.exploration_distance==exploration_distances[index]
+            assert abs(Theseus.exploration_distance-exploration_distances[index])<0.01
             assert Theseus.location == Theseus.K.M.exit
 
 if __name__=="__main__":

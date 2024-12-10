@@ -5,7 +5,6 @@ import math
 import csv
 import random
 
-#Students shouldn't need to use any functions from this class, directly.
 class maze(object):
     '''
     The maze class contains: 
@@ -45,12 +44,12 @@ class maze(object):
         for e in self.G.edges:
             if e not in self.S.edges: #loop through the closed edges
                 midpoint= self.edge_midpoint(e)
-                new_node_name = "d,"+str(e[0]) +"," + str(e[1])
+                new_node_name = "d-"+str(e[0]) +"-" + str(e[1])
                 self.add_node_to_D(new_node_name, midpoint, [e[0]])
                 self.posD[new_node_name]=midpoint
                 self.edgeD[new_node_name] = tuple(sorted((e[0],e[1])))
                 counter += 1
-                new_node_name = "d"+str(e[0]) +"," + str(e[1])
+                new_node_name = "d-"+str(e[0]) +"-" + str(e[1])
                 self.add_node_to_D(new_node_name, midpoint, [e[1]])
                 self.posD[new_node_name]=midpoint
                 self.edgeD[new_node_name] = tuple(sorted((e[0],e[1])))
@@ -76,12 +75,13 @@ class maze(object):
     def edge_length(self,node1,node2):
         #Assumes node1 and node2 are strings that represent nodes.
         #Returns the distance between the nodes. The distance is a float.
+        #Despite the name, there's actually no requirement that node1 is adjacent to node2
         node1_x, node1_y = self.pos[node1]
         node2_x, node2_y = self.pos[node2]
         return ((node2_x - node1_x)**2 + (node2_y - node1_y)**2)**0.5
     def edge_midpoint(self,e):
         #Assumes e is an edge (a 2-tuple of nodes).
-        #returns the midpoint of the edge between the nodes, a float.
+        #returns the midpoint of the edge between the nodes, a tuple of floats.
         node1,node2=e
         node1_x, node1_y = self.pos[node1]
         node2_x, node2_y = self.pos[node2]
@@ -138,7 +138,7 @@ class maze(object):
         except Exception as e:
             print(f"Error writing to file: {e}")
 
-#Students may need the function unexplored_nodes.
+#Students may need the function unexplored_nodes().
 class known_maze(maze):
     '''
     The known maze class contains
@@ -195,7 +195,7 @@ class known_maze(maze):
         pairs, info = self.unexplored_edges()
         return [ (v, info[(v,i)][0]) for v,i in pairs if not info[(v,i)][0] in self.explored.nodes]
 
-#Students may need the functions explore_edge, explore_node (calls_explore_edge), and travel_to_node.
+#Students may need the functions explore_edge(), explore_node() (calls_explore_edge), and travel_to_node().
 class hero(object):
     '''
     The hero class contains
@@ -323,8 +323,6 @@ class hero(object):
         path = recover_path_from_shortest_distances(self.K,self.K.shortest_distances, self.location, node)
         for p in path:
             self.explore_node(p)
-            if not self.drawing is None:
-                self.drawing.update_graph()
 
     def ponder_choices(self):
         print(f"Thesus is at {self.location} at {self.K.pos[self.location]}.")
