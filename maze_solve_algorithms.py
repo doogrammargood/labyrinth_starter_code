@@ -37,6 +37,7 @@ def a_star_search(Theseus):
     M.edge_length(node1,node2) . . . . . . Returns the distance between node1 and node2. They don't need to be adjacent.
     Theseus.travel_to_node(node) . . . . . Takes Theseus to the node, node along the shortest path through K, assuming that node is a vertex of K.nodes.
     Theseus.explore_node(node) . . . . . . Moves Theseus to node, if it is a neighbor of his location. Has side effects on K and updates the drawing.
+    recover_path_from_shortest_distances. .See maze_design_algorithms
     '''
     M=Theseus.K.M
     K=Theseus.K

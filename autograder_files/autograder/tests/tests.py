@@ -9,7 +9,7 @@ class Tests(TestCase):
 
     @weight(10)
     @number(1)
-    @visibility(True)
+    @visibility('visible')
     def test_fisher_shuffle(self):
         #tests if the fisher shuffle is actually returning uniformly random permutations.
         #Apples the chi-squared test.

@@ -30,9 +30,14 @@ def text_explore():
     M= maze(filename="maze_graphs/maze3.graphml")
     K=known_maze(M)
     Theseus= hero(K)
+
+    vertex_color_dict,edge_color_dict = graph_drawer.get_graph_colors(M,Theseus)
+    drawing = graph_drawer(M.G, M.pos, vertex_color_dict, edge_color_dict)
     while(Theseus.location != M.exit):
         Theseus.ponder_choices()
         Theseus.make_choice()
+        vertex_color_dict,edge_color_dict = graph_drawer.get_graph_colors(M,Theseus)
+        drawing.recolor_graph(vertex_color_dict, edge_color_dict)
 if __name__=="__main__":
     run_all_dfs()
     run_all_a_star()

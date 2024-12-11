@@ -1,0 +1,16 @@
+{
+    "tests": [
+        {
+            "name": "Checks that the code runs.",
+            "score": 50,
+            "max_score": 50,
+            "status": "passed",
+            "visibility": "after_due_date",
+            "number": "1"
+        }
+    ],
+    "leaderboard": [],
+    "visibility": "visible",
+    "execution_time": "0.00",
+    "score": 50
+}
