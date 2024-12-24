@@ -13,7 +13,7 @@ def run_all_dfs():
 def run_all_a_star():
     #runs A* on all the graph mazes and displays it.
     for file in graph_names:
-        M=maze(filename=file)
+        M=maze(filename=file, reopen_edges=float('inf'))
         K=known_maze(M)
         Theseus=hero(K)
         a_star_search(Theseus)
@@ -34,6 +34,7 @@ def text_explore():
         Theseus.ponder_choices()
         Theseus.make_choice()
 if __name__=="__main__":
-    run_all_dfs()
+    #run_all_dfs()
     run_all_a_star()
-    run_lp_shortest_paths()
+    #text_explore()
+    #run_lp_shortest_paths()

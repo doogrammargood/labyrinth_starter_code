@@ -9,7 +9,7 @@ Finally, we have a "hero" class that keeps track of distance traveled and deaden
 
 The algorithms to implement for the project belong in maze_solve_algorithms and maze.
 
-Here, we give an overview of the files and the notable classes and functions in each file. The files are listed in order, so that each file imports some of the previous files. The students must write the functions labeled with *.
+Here, we give an overview of the files and the notable classes and functions in each file. The files are listed in order, so that each file imports all of the previous files. The students must write the functions labeled with *.
 
 |File|Important classes/functions|What they do|
 |----|---------------------------|------------|
@@ -17,6 +17,7 @@ Here, we give an overview of the files and the notable classes and functions in 
 | |graph_drawer(class)|Draws graphs with matplotlib. Handles updating the drawing.|
 |maze_design algorithms|fisher_shuffle*|Creates a uniformly random permutation.|
 | |kruskals*|Finds a minimal spanning tree.|
+| |update_shortest_distances|Maintains a dictionary of all-pairs shortest paths.|
 | |recover_path_from_shortest_distances|gives the shortest path between known nodes.|
 |maze|maze(class)|Represents the physical maze with some closed edges.|
 | |known_maze(class)|Represents our knowledge of the maze.|

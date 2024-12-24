@@ -17,8 +17,8 @@ draw_and_parse_graph . .parse_graph. . . . . . . . . . Creates a Networkx graph 
 . . . . . . . . . . . . graph_drawer(class). . . . . . Draws graphs with matplotlib. Handles updating the drawing.
 maze_design algorithms. fisher_shuffle*. . . . . . . . Creates a uniformly random permutation.
 . . . . . . . . . . . . kruskals* . . . . . . . . . . .Finds a minimal spanning tree.
-. . . . . . . . . . . . update_shortest_distances . . .Maintains a dictionary of all-pairs shortest paths.
-. . . . . . . . . recover_path_from_shortest_distances gives the shortest path between known nodes.
+. . . . . . . . . . . . update_shortest_known_path . . .Maintains a dictionary of all-pairs shortest paths.
+. . . . . . . . . recover_path_from_shortest_known_path gives the shortest path between known nodes.
 maze . . . . . . . . . .maze(class). . . . . . . . . . Represents the physical maze with some closed edges.
 . . . . . . . . . . . . known_maze(class) . . . . . . .Represents our knowledge of the maze.
 . . . . . . . . . . . . hero(class) . . . . . . . . . .Represents a person in the maze. Tracks statistics.

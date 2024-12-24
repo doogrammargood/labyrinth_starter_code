@@ -57,7 +57,12 @@ class graph_drawer(object):
         self.edge_color_choices = ["pink", "green","red"]
         self.vertex_color_choices = ["skyblue","red","blue","darkblue", "black"]
         # Draw graph using positions
-        plt.figure(figsize=(12, 12))
+        fig = plt.figure(figsize=(12, 12))
+        ax = fig.add_subplot(111)
+        x_values, y_values = zip(*self.Theseus.K.M.pos.values())  # Unpack all x and y coordinates
+        ax.set_xlim(min(x_values) - 50, max(x_values) + 50)  # Add padding
+        ax.set_ylim(min(y_values) - 50, max(y_values) + 50)
+
         # Draw nodes
         colors = [self.vertex_color_choices[vertex_color_dict[node]] for node in self.G.nodes]
         self.nodes = nx.draw_networkx_nodes(self.G, Theseus.K.M.pos, node_color=colors, node_size=100)
@@ -66,8 +71,12 @@ class graph_drawer(object):
         edge_colors = [self.edge_color_choices[edge_color_dict[tuple(sorted(edge))]] for edge in self.G.edges]
         self.edges = nx.draw_networkx_edges(self.G, Theseus.K.M.pos, edge_color=edge_colors)
         
+        #Draw hero
+        self.hero_location, = ax.plot([self.Theseus.coordinates()[0]], [self.Theseus.coordinates()[1]], 'ro')
         # Write labels
         nx.draw_networkx_labels(self.G, Theseus.K.M.pos, font_size=12)
+        fig.canvas.draw()
+
         plt.ion()  # Interactive mode for dynamic updates
         plt.axis("off")  # Hide axis
         plt.show(block=False)
@@ -106,10 +115,11 @@ class graph_drawer(object):
         colors = [self.vertex_color_choices[vertex_color_dict[node]] for node in self.G.nodes]
         self.nodes.set_color(colors)
 
-    def update_graph(self):
+    def update_graph(self,update_time):
+        plt.pause(update_time)
         vertex_color_dict,edge_color_dict = self.get_graph_colors()
         self.recolor_graph(vertex_color_dict,edge_color_dict)
-        plt.pause(0.1)
+        self.hero_location.set_data([self.Theseus.coordinates()[0]+10],[self.Theseus.coordinates()[1]+10])
 # Example usage
 #file_path = "maze3.graphml"  # Replace with your file path
 #visualize_graph_with_curved_edges(file_path)
